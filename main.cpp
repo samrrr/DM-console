@@ -73,7 +73,7 @@ BigRat input_rat(char name)
 	s_b = ss;
 	free(ss);
 
-	c = BigRat(s_a,s_b);
+	c = BigRat(BigInt(s_a),BigNat(s_b));
 
 	return c;
 }
@@ -186,7 +186,7 @@ void menu_nat()
 			puts("a/b");
 			a = input_nat('a');
 			b = input_nat('b');
-			if (b > 0)
+			if (b != 0)
 			{
 				c = a / b;
 
@@ -201,7 +201,7 @@ void menu_nat()
 			puts("a mod b");
 			a = input_nat('a');
 			b = input_nat('b');
-			if (b > 0)
+			if (b != 0)
 			{
 				c = a % b;
 
@@ -274,7 +274,7 @@ void menu_int()
 			puts("a/b");
 			a = input_int('a');
 			b = input_int('b');
-			if (b > 0)
+			if (b != 0)
 			{
 				c = a / b;
 
@@ -359,7 +359,7 @@ void menu_rat()
 			puts("a/b");
 			a = input_rat('a');
 			b = input_rat('b');
-			if (b > 0)
+			if (b != 0)
 			{
 				c = a / b;
 
